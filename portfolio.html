@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<!-- Portfolio page with 3D, FX, game, and film categories -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <title>3D Animation & VFX | Portfolio</title>
+</head>
+<body class="portfolio-page">
+    <div class="page-shell">
+        <header class="site-header">
+            <div class="brand-row">
+                <a class="brand" href="index.html">
+                    <img src="logo.png" alt="Portfolio logo" class="logo">
+                    <div class="brand-title">
+                        <h1>Nadeesh Jeyashankar</h1>
+                    </div>
+                </a>
+                <nav class="site-nav">
+                    <a href="index.html">Home</a>
+                    <a href="portfolio.html" class="active">3D Animation & VFX</a>
+                    <a href="vr.html">VR</a>
+                    <a href="games.html">Games</a>
+                    <a href="film.html">Film</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero-copy">
+                    <span class="eyebrow">Portfolio categories</span>
+                    <h1>3D Animation & VFX Portfolio</h1>
+                    <p>Designed for recruiters and studios who want a fast, easy way to compare skills and growing project libraries.</p>
+                    <div class="hero-actions">
+                        <a href="#modelling" class="btn primary">Explore sections</a>
+                        <a href="contact.html" class="btn secondary">Contact</a>
+                    </div>
+                </div>
+                <canvas id="threejs-bg"></canvas>
+            </section>
+
+            <section id="modelling" class="section">
+                <div class="section-title">
+                    <h2>3D Modelling</h2>
+                </div>
+                <div class="project-grid">
+                    <!-- Copy a project card to add a new modelling project -->
+                    <article class="project-card">
+                        <details>
+                            <summary>
+                                <h3>Phone Model - Advertising Style</h3>
+                                <p>Phone model with lighting in an advertising style, showcasing product presentation.</p>
+                                <div class="software-tags">
+                                    <div class="software-tag">
+                                        <img src="software%20logo/blender-logo.png" alt="Blender">
+                                        <span>Blender</span>
+                                    </div>
+                                    <div class="software-tag">
+                                        <img src="software%20logo/DaVinci-logo.png" alt="DaVinci Resolve">
+                                        <span>DaVinci Resolve</span>
+                                    </div>
+                                </div>
+                                <img src="3D/image3.jpg" alt="Phone Model Preview" class="media-preview">
+                            </summary>
+                            <div class="details-content">
+                                <p>A hard-surface model of a smartphone created with clean topology and efficient UV mapping. The advertising-style lighting emphasizes the product's sleek design, making it suitable for marketing materials and presentations.</p>
+                                <div class="media-container">
+                                    <video controls playsinline preload="metadata" loop muted autoplay>
+                                        <source src="3D/video9.mov" type="video/quicktime">
+                                        <source src="3D/video9.mp4" type="video/mp4">
+                                        Your browser does not support this video.
+                                    </video>
+                                </div>
+                            </div>
+                        </details>
+                    </article>
+                    <article class="project-card">
+                        <details>
+                            <summary>
+                                <h3>Fruit Shop Lighting Experiment</h3>
+                                <p>Warm lighting setup with smooth camera work to evoke a fruits market feel.</p>
+                                <div class="software-tags">
+                                    <div class="software-tag">
+                                        <img src="software%20logo/blender-logo.png" alt="Blender">
+                                        <span>Blender</span>
+                                    </div>
+                                    <div class="software-tag">
+                                        <img src="software%20logo/DaVinci-logo.png" alt="DaVinci Resolve">
+                                        <span>DaVinci Resolve</span>
+                                    </div>
+                                </div>
+                                <img src="https://img.youtube.com/vi/d_QXL1AkRv0/maxresdefault.jpg" alt="Fruit Shop Lighting Preview" class="media-preview">
+                            </summary>
+                            <div class="details-content">
+                                <p>This lighting experiment focuses on creating a warm, inviting atmosphere reminiscent of a traditional fruits market. Using Blender's advanced lighting tools, the scene features soft, diffused light with subtle shadows and highlights to enhance the organic textures of the fruits and create a cozy, market-like ambiance.</p>
+                                <div class="media-container">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/d_QXL1AkRv0?autoplay=1&mute=1&loop=1&playlist=d_QXL1AkRv0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </details>
+                    </article>
+                    <article class="project-card">
+                        <details>
+                            <summary>
+                                <h3>Boat Model</h3>
+                                <p>Detailed boat model created as part of Goldsmiths coursework, focusing on marine design.</p>
+                                <div class="software-tags">
+                                    <div class="software-tag">
+                                        <img src="software%20logo/maya-logo.png" alt="Maya">
+                                        <span>Maya</span>
+                                    </div>
+                                    <div class="software-tag">
+                                        <img src="software%20logo/photoshop-logo.png" alt="Photoshop">
+                                        <span>Photoshop</span>
+                                    </div>
+                                    <div class="software-tag">
+                                        <img src="software%20logo/DaVinci-logo.png" alt="DaVinci Resolve">
+                                        <span>DaVinci Resolve</span>
+                                    </div>
+                                </div>
+                                <img src="https://img.youtube.com/vi/PKDtRUbQhRk/maxresdefault.jpg" alt="Boat Model Preview" class="media-preview">
+                            </summary>
+                            <div class="details-content">
+                                <p>A comprehensive 3D model of a boat, developed during university coursework at Goldsmiths. The project emphasized accurate hull design, rigging details, and marine-specific modeling techniques using Autodesk Maya.</p>
+                                <div class="media-container">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/PKDtRUbQhRk?autoplay=1&mute=1&loop=1&playlist=PKDtRUbQhRk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/zZb5rs9rDRY?autoplay=1&mute=1&loop=1&playlist=zZb5rs9rDRY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </details>
+                    </article>
+                    <article class="project-card">
+                        <details>
+                            <summary>
+                                <h3>Axe Model</h3>
+                                <p>Hard-surface axe model with intricate details, completed for academic assessment.</p>
+                                <div class="software-tags">
+                                    <div class="software-tag">
+                                        <img src="software%20logo/maya-logo.png" alt="Maya">
+                                        <span>Maya</span>
+                                    </div>
+                                    <div class="software-tag">
+                                        <img src="software%20logo/photoshop-logo.png" alt="Photoshop">
+                                        <span>Photoshop</span>
+                                    </div>
+                                    <div class="software-tag">
+                                        <img src="software%20logo/DaVinci-logo.png" alt="DaVinci Resolve">
+                                        <span>DaVinci Resolve</span>
+                                    </div>
+                                </div>
+                                <img src="https://img.youtube.com/vi/XFNm8R6zNSA/maxresdefault.jpg" alt="Axe Model Preview" class="media-preview">
+                            </summary>
+                            <div class="details-content">
+                                <p>This project involved modeling a fantasy-style axe with high attention to detail on the blade, handle, and decorative elements. Created in Maya as part of Goldsmiths coursework, demonstrating advanced polygonal modeling skills.</p>
+                                <div class="media-container">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/XFNm8R6zNSA?autoplay=1&mute=1&loop=1&playlist=XFNm8R6zNSA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/8U1DGcgKPWU?autoplay=1&mute=1&loop=1&playlist=8U1DGcgKPWU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </details>
+                    </article>
+                    <article class="project-card">
+                        <details>
+                            <summary>
+                                <h3>Furniture Model</h3>
+                                <p>Functional furniture piece modeled with realistic proportions and materials.</p>
+                                <div class="software-tags">
+                                    <div class="software-tag">
+                                        <img src="software%20logo/maya-logo.png" alt="Maya">
+                                        <span>Maya</span>
+                                    </div>
+                                    <div class="software-tag">
+                                        <img src="software%20logo/DaVinci-logo.png" alt="DaVinci Resolve">
+                                        <span>DaVinci Resolve</span>
+                                    </div>
+                                </div>
+                                <img src="https://img.youtube.com/vi/FsA0Nm-grbU/maxresdefault.jpg" alt="Furniture Model Preview" class="media-preview">
+                            </summary>
+                            <div class="details-content">
+                                <p>A detailed furniture model created for university submission at Goldsmiths. The project focused on creating production-ready assets with proper scale, materials, and construction details using Maya.</p>
+                                <div class="media-container">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/FsA0Nm-grbU?autoplay=1&mute=1&loop=1&playlist=FsA0Nm-grbU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </details>
+                    </article>
+                    <article class="project-card">
+                        <details>
+                            <summary>
+                                <h3>2.5D Grass Animation</h3>
+                                <p>Animated grass field using 2.5D techniques for stylized environmental effects.</p>
+                                <div class="software-tags">
+                                    <div class="software-tag">
+                                        <img src="software%20logo/blender-logo.png" alt="Blender">
+                                        <span>Blender</span>
+                                    </div>
+                                    <div class="software-tag">
+                                        <img src="software%20logo/DaVinci-logo.png" alt="DaVinci Resolve">
+                                        <span>DaVinci Resolve</span>
+                                    </div>
+                                </div>
+                                <img src="https://img.youtube.com/vi/H6ACD3ZHaXA/maxresdefault.jpg" alt="2.5D Grass Animation Preview" class="media-preview">
+                            </summary>
+                            <div class="details-content">
+                                <p>This animation project combines 2D and 3D elements to create a stylized grass field that responds to wind. Developed in Blender for a university submission, showcasing particle systems and procedural animation techniques.</p>
+                                <div class="media-container">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/H6ACD3ZHaXA?autoplay=1&mute=1&loop=1&playlist=H6ACD3ZHaXA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </details>
+                    </article>
+                </div>
+            </section>
+
+            <section id="lighting" class="section">
+                <div class="section-title">
+                    <h2>Lighting</h2>
+                </div>
+                <div class="project-grid">
+                    <article class="project-card">
+                        <details>
+                            <summary>
+                                <h3>Living Room Lighting Experiment</h3>
+                                <p>Interior lighting setup in a living room environment with detailed pipelines.</p>
+                                <div class="software-tags">
+                                    <div class="software-tag">
+                                        <img src="software%20logo/blender-logo.png" alt="Blender">
+                                        <span>Blender</span>
+                                    </div>
+                                    <div class="software-tag">
+                                        <img src="software%20logo/lightroom-logo.png" alt="Lightroom">
+                                        <span>Lightroom</span>
+                                    </div>
+                                </div>
+                                <img src="3D/image2.jpg" alt="Living Room Lighting Preview" class="media-preview">
+                            </summary>
+                            <div class="details-content">
+                                <p>This study demonstrates interior lighting that supports realistic materials and a natural atmosphere. The scene uses layered light rigs, soft shadows and warm ambient balances to create a believable domestic setup.</p>
+                                <div class="media-container">
+                                    <img src="3D/image2.jpg" alt="Living Room Lighting" loading="lazy">
+                                </div>
+                            </div>
+                        </details>
+                    </article>
+                    <article class="project-card">
+                        <details>
+                            <summary>
+                                <h3>Pipeline Lighting Study</h3>
+                                <p>Structured pipeline lighting setup using efficient passes and render-ready workflow.</p>
+                                <div class="software-tags">
+                                    <div class="software-tag">
+                                        <img src="software%20logo/blender-logo.png" alt="Blender">
+                                        <span>Blender</span>
+                                    </div>
+                                    <div class="software-tag">
+                                        <img src="software%20logo/lightroom-logo.png" alt="Lightroom">
+                                        <span>Lightroom</span>
+                                    </div>
+                                </div>
+                                <img src="3D/image5.jpg" alt="Pipeline Lighting Preview" class="media-preview">
+                            </summary>
+                            <div class="details-content">
+                                <p>This pipeline lighting study focuses on lighting rigs and pass separation for compositing and asset handoff. It highlights organised light placement, consistent exposure and efficient render preparation.</p>
+                                <div class="media-container">
+                                    <img src="3D/image5.jpg" alt="Pipeline Lighting" loading="lazy">
+                                </div>
+                            </div>
+                        </details>
+                    </article>
+                </div>
+            </section>
+
+            <section id="fx" class="section">
+                <div class="section-title">
+                    <h2>FX</h2>
+                </div>
+                <div class="project-grid">
+                    <article class="project-card">
+                        <details>
+                            <summary>
+                                <h3>Upside Down Particle System</h3>
+                                <p>Dot particles moving outwards from a center, inspired by Stranger Things' upside down.</p>
+                                <span class="meta">Blender</span>
+                                <video class="media-preview media-preview-video" muted autoplay loop playsinline preload="metadata">
+                                    <source src="3D/upside-down.mov" type="video/quicktime">
+                                </video>
+                            </summary>
+                            <div class="details-content">
+                                <p>This particle simulation creates a mesmerizing effect of particles emanating from a central point, drawing inspiration from the Upside Down dimension in Stranger Things. Using Blender's particle system, the animation demonstrates control over emission, velocity, and visual aesthetics for atmospheric effects.</p>
+                                <div class="media-container">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/4l7HbSbkiE4?autoplay=1&mute=1&loop=1&playlist=4l7HbSbkiE4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </details>
+                    </article>
+                    <article class="project-card">
+                        <details>
+                            <summary>
+                                <h3>Blackhole Animation</h3>
+                                <p>Blackhole animation experiment inspired by Interstellar, with gravitational effects.</p>
+                                <div class="software-tags">
+                                    <div class="software-tag">
+                                        <img src="software%20logo/blender-logo.png" alt="Blender">
+                                        <span>Blender</span>
+                                    </div>
+                                    <div class="software-tag">
+                                        <img src="software%20logo/DaVinci-logo.png" alt="DaVinci Resolve">
+                                        <span>DaVinci Resolve</span>
+                                    </div>
+                                </div>
+                                <video class="media-preview media-preview-video" muted autoplay loop playsinline preload="metadata">
+                                    <source src="3D/blackhole.mov" type="video/quicktime">
+                                </video>
+                            </summary>
+                            <div class="details-content">
+                                <p>A visual representation of a black hole's gravitational pull, featuring accretion disk effects and spacetime distortion. Created in Blender, this project explores advanced compositing techniques and particle simulations to achieve cinematic astrophysical visuals.</p>
+                                <div class="media-container">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/SA6bAl3sKBU?autoplay=1&mute=1&loop=1&playlist=SA6bAl3sKBU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </details>
+                    </article>
+                    <article class="project-card">
+                        <details>
+                            <summary>
+                                <h3>Fluid Particle System</h3>
+                                <p>Fluid-style particles emitting from the floor, creating dynamic motion effects.</p>
+                                <div class="software-tags">
+                                    <div class="software-tag">
+                                        <img src="software%20logo/blender-logo.png" alt="Blender">
+                                        <span>Blender</span>
+                                    </div>
+                                    <div class="software-tag">
+                                        <img src="software%20logo/DaVinci-logo.png" alt="DaVinci Resolve">
+                                        <span>DaVinci Resolve</span>
+                                    </div>
+                                </div>
+                                <video class="media-preview media-preview-video" muted autoplay loop playsinline preload="metadata">
+                                    <source src="3D/fluid%20sim.mp4" type="video/mp4">
+                                </video>
+                            </summary>
+                            <div class="details-content">
+                                <p>This simulation mimics fluid dynamics using particle systems in Blender. The particles rise from the ground with realistic physics, demonstrating skills in procedural animation and effect creation for dynamic visual storytelling.</p>
+                                <div class="media-container">
+                                    <video controls playsinline preload="metadata" loop muted autoplay>
+                                        <source src="3D/fluid%20sim.mp4" type="video/mp4">
+                                        Your browser does not support this video.
+                                    </video>
+                                </div>
+                            </div>
+                        </details>
+                    </article>
+                    <article class="project-card">
+                        <details>
+                            <summary>
+                                <h3>Helix DNA Particles</h3>
+                                <p>Particle system on a helix-like DNA structure with particles emitting off it.</p>
+                                <div class="software-tags">
+                                    <div class="software-tag">
+                                        <img src="software%20logo/blender-logo.png" alt="Blender">
+                                        <span>Blender</span>
+                                    </div>
+                                    <div class="software-tag">
+                                        <img src="software%20logo/DaVinci-logo.png" alt="DaVinci Resolve">
+                                        <span>DaVinci Resolve</span>
+                                    </div>
+                                </div>
+                                <video class="media-preview media-preview-video" muted autoplay loop playsinline preload="metadata">
+                                    <source src="3D/DNA.mp4" type="video/mp4">
+                                </video>
+                            </summary>
+                            <div class="details-content">
+                                <p>A scientific visualization of DNA structure with animated particles following helical paths. Using Blender's curve guides and particle systems, this project combines biological accuracy with artistic particle effects.</p>
+                                <div class="media-container">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/C7pzuZGwLkY?autoplay=1&mute=1&loop=1&playlist=C7pzuZGwLkY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </details>
+                    </article>
+                    <article class="project-card">
+                        <details>
+                            <summary>
+                                <h3>Venom Microscopic Experiment</h3>
+                                <p>Venom-style experiment in a microscopic perspective, showcasing detailed FX.</p>
+                                <div class="software-tags">
+                                    <div class="software-tag">
+                                        <img src="software%20logo/blender-logo.png" alt="Blender">
+                                        <span>Blender</span>
+                                    </div>
+                                    <div class="software-tag">
+                                        <img src="software%20logo/DaVinci-logo.png" alt="DaVinci Resolve">
+                                        <span>DaVinci Resolve</span>
+                                    </div>
+                                </div>
+                                <video class="media-preview media-preview-video" muted autoplay loop playsinline preload="metadata">
+                                    <source src="3D/venom.mp4" type="video/mp4">
+                                </video>
+                            </summary>
+                            <div class="details-content">
+                                <p>This microscopic simulation explores cellular-level effects inspired by Venom's symbiote nature. Created in Blender, it demonstrates advanced particle systems and material shaders for creating organic, otherworldly visual effects.</p>
+                                <div class="media-container">
+                                    <video controls playsinline preload="metadata" loop muted autoplay>
+                                        <source src="3D/venom.mp4" type="video/mp4">
+                                        Your browser does not support this video.
+                                    </video>
+                                </div>
+                            </div>
+                        </details>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section cta-banner">
+                <div>
+                    <h2>Need a strong 3D artist for your next production?</h2>
+                    <p>Each section is built to help hiring teams compare skills quickly and grow the portfolio easily.</p>
+                </div>
+                <div class="banner-actions">
+                    <a href="contact.html" class="btn primary">Connect</a>
+                    <a href="index.html" class="btn secondary">Home</a>
+                </div>
+            </section>
+
+
+        <footer class="site-footer">
+            <div class="footer-brand">Portfolio</div>
+            <div>3D Animation, VFX and Game production.</div>
+        </footer>
+    </div>
+    <div class="project-modal" id="projectModal" hidden>
+        <div class="modal-backdrop" id="modalBackdrop"></div>
+        <div class="modal-shell">
+            <button class="modal-close" id="modalClose" aria-label="Close project preview">×</button>
+            <div class="modal-layout">
+                <div class="modal-media" id="modalMedia"></div>
+                <div class="modal-copy">
+                    <span class="eyebrow">Project preview</span>
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalDescription"></p>
+                    <div class="modal-meta-wrap">
+                        <span class="meta">Software used</span>
+                        <div id="modalSoftware" class="software-tags"></div>
+                    </div>
+                    <div class="modal-actions">
+                        <button class="btn secondary" id="modalVolume">Unmute</button>
+                        <button class="btn secondary" id="modalFullscreen">Fullscreen</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Tubes-like background adapted to warm/dark portfolio theme.
+        (async function initPortfolioBackground() {
+            const canvas = document.getElementById('threejs-bg');
+            if (!canvas) return;
+
+            const warmTubeColors = ['#ff9e4d', '#ffcf75', '#ff7a4a', '#e98cff'];
+            const warmLightColors = ['#ffb366', '#ff8a4a', '#ffd27a', '#d389ff'];
+
+            try {
+                // Reference-inspired component (CC BY-NC-SA source by original author).
+                const module = await import('https://cdn.jsdelivr.net/npm/threejs-components@0.0.19/build/cursors/tubes1.min.js');
+                const TubesCursor = module.default;
+
+                const app = TubesCursor(canvas, {
+                    tubes: {
+                        colors: warmTubeColors,
+                        lights: {
+                            intensity: 130,
+                            colors: warmLightColors
+                        }
+                    }
+                });
+
+                // Keep subtle and readable for portfolio content.
+                document.addEventListener('visibilitychange', () => {
+                    if (document.hidden) {
+                        app?.tubes?.setLightsColors(['#000000', '#000000', '#000000', '#000000']);
+                    } else {
+                        app?.tubes?.setLightsColors(warmLightColors);
+                    }
+                });
+            } catch (error) {
+                // Lightweight fallback if CDN import fails.
+                const scene = new THREE.Scene();
+                const camera = new THREE.PerspectiveCamera(72, window.innerWidth / window.innerHeight, 0.1, 1000);
+                const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+                renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+                renderer.setSize(window.innerWidth, window.innerHeight);
+
+                const mouse = new THREE.Vector2();
+                const target = new THREE.Vector2();
+                const colors = [0xff9e4d, 0xffcf75, 0xff7a4a, 0xe98cff];
+
+                class Trail {
+                    constructor(color, phase) {
+                        this.phase = phase;
+                        this.max = 34;
+                        this.points = Array.from({ length: this.max }, (_, i) => new THREE.Vector3(0, 0, -i * 0.08));
+                        this.geometry = new THREE.BufferGeometry();
+                        this.glowGeometry = new THREE.BufferGeometry();
+                        this.line = new THREE.Line(this.geometry, new THREE.LineBasicMaterial({ color, transparent: true, opacity: 0.32 }));
+                        this.glow = new THREE.Line(this.glowGeometry, new THREE.LineBasicMaterial({ color, transparent: true, opacity: 0.10 }));
+                        scene.add(this.glow);
+                        scene.add(this.line);
+                        this.refresh();
+                    }
+                    update(time) {
+                        const t = time * 0.001;
+                        this.points.unshift(new THREE.Vector3(
+                            target.x * 4.5 + Math.sin(t * 2 + this.phase) * 0.12,
+                            target.y * 3.0 + Math.cos(t * 1.7 + this.phase) * 0.10,
+                            Math.sin(t + this.phase) * 0.22
+                        ));
+                        this.points.length = this.max;
+                        for (let i = 1; i < this.points.length; i++) this.points[i].z = -i * 0.08;
+                        this.refresh();
+                    }
+                    refresh() {
+                        const arr = [];
+                        this.points.forEach((p) => arr.push(p.x, p.y, p.z));
+                        this.geometry.setAttribute('position', new THREE.Float32BufferAttribute(arr, 3));
+                        this.glowGeometry.setAttribute('position', new THREE.Float32BufferAttribute(arr, 3));
+                    }
+                }
+
+                const trails = colors.map((c, i) => new Trail(c, i * 0.9));
+                camera.position.z = 6;
+
+                document.addEventListener('mousemove', (e) => {
+                    mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
+                    mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
+                });
+
+                function loop() {
+                    requestAnimationFrame(loop);
+                    const now = Date.now();
+                    target.lerp(mouse, 0.08);
+                    trails.forEach((t) => t.update(now));
+                    camera.position.x = target.x * 0.3;
+                    camera.position.y = target.y * 0.22;
+                    camera.lookAt(0, 0, 0);
+                    renderer.render(scene, camera);
+                }
+                loop();
+
+                window.addEventListener('resize', () => {
+                    camera.aspect = window.innerWidth / window.innerHeight;
+                    camera.updateProjectionMatrix();
+                    renderer.setSize(window.innerWidth, window.innerHeight);
+                });
+            }
+        })();
+
+        const projectModal = document.getElementById('projectModal');
+        const modalBackdrop = document.getElementById('modalBackdrop');
+        const modalClose = document.getElementById('modalClose');
+        const modalMedia = document.getElementById('modalMedia');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDescription = document.getElementById('modalDescription');
+        const modalSoftware = document.getElementById('modalSoftware');
+        const modalVolume = document.getElementById('modalVolume');
+        const modalFullscreen = document.getElementById('modalFullscreen');
+
+        function closeModal() {
+            projectModal.hidden = true;
+            projectModal.classList.remove('open');
+            document.body.classList.remove('no-scroll');
+            modalMedia.innerHTML = '';
+        }
+
+        function buildModalMedia(sources) {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'modal-media-group';
+
+            if (!sources || sources.length === 0) {
+                const placeholder = document.createElement('div');
+                placeholder.textContent = 'Media unavailable';
+                wrapper.appendChild(placeholder);
+                return wrapper;
+            }
+
+            sources.forEach((source) => {
+                if (source.tagName === 'VIDEO') {
+                    const video = document.createElement('video');
+                    video.controls = true;
+                    video.playsInline = true;
+                    video.preload = 'metadata';
+                    video.loop = true;
+                    video.muted = true;
+                    video.autoplay = true;
+                    video.className = 'modal-video';
+
+                    source.querySelectorAll('source').forEach((src) => {
+                        const s = document.createElement('source');
+                        s.src = src.src;
+                        s.type = src.type;
+                        video.appendChild(s);
+                    });
+
+                    video.addEventListener('click', () => {
+                        if (video.requestFullscreen) {
+                            video.requestFullscreen();
+                        }
+                    });
+
+                    video.addEventListener('loadedmetadata', () => {
+                        video.play().catch(() => {});
+                    });
+
+                    wrapper.appendChild(video);
+                } else if (source.tagName === 'IFRAME') {
+                    const iframe = document.createElement('iframe');
+                    iframe.src = source.src;
+                    iframe.width = source.width || '560';
+                    iframe.height = source.height || '315';
+                    iframe.frameBorder = '0';
+                    iframe.allow = source.allow || 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+                    iframe.allowFullscreen = true;
+                    iframe.className = 'modal-iframe';
+                    wrapper.appendChild(iframe);
+                } else if (source.tagName === 'IMG') {
+                    const img = document.createElement('img');
+                    img.src = source.src;
+                    img.alt = source.alt || '';
+                    img.loading = 'lazy';
+                    img.className = 'modal-image';
+                    img.addEventListener('click', () => {
+                        if (img.requestFullscreen) {
+                            img.requestFullscreen();
+                        }
+                    });
+                    wrapper.appendChild(img);
+                }
+            });
+
+            return wrapper;
+        }
+
+        function openCardModal(card) {
+            const summary = card.querySelector('summary');
+            const title = summary.querySelector('h3')?.textContent.trim() || '';
+            const description = card.querySelector('.details-content p')?.textContent.trim() || '';
+            const softwareTagElements = summary.querySelectorAll('.software-tag');
+            const sourceMedia = card.querySelectorAll('.details-content .media-container > *');
+            const mediaWrapper = buildModalMedia(sourceMedia);
+
+            modalTitle.textContent = title;
+            modalDescription.textContent = description;
+            
+            // Clear existing software tags and add new ones
+            modalSoftware.innerHTML = '';
+            softwareTagElements.forEach(tag => {
+                const clone = tag.cloneNode(true);
+                modalSoftware.appendChild(clone);
+            });
+            
+            modalMedia.innerHTML = '';
+            modalMedia.appendChild(mediaWrapper);
+
+            const videos = mediaWrapper.querySelectorAll('video');
+            const iframes = mediaWrapper.querySelectorAll('iframe');
+            if (videos.length > 0) {
+                modalVolume.style.display = 'inline-flex';
+                modalVolume.textContent = videos[0].muted ? 'Unmute' : 'Mute';
+                modalFullscreen.style.display = 'inline-flex';
+                modalFullscreen.onclick = () => {
+                    if (videos[0].requestFullscreen) {
+                        videos[0].requestFullscreen();
+                    }
+                };
+                modalVolume.onclick = () => {
+                    const muted = !videos[0].muted;
+                    videos.forEach((video) => {
+                        video.muted = muted;
+                        if (!muted) {
+                            video.play().catch(() => {});
+                        }
+                    });
+                    modalVolume.textContent = muted ? 'Unmute' : 'Mute';
+                };
+            } else if (iframes.length > 0) {
+                modalVolume.style.display = 'none';
+                modalFullscreen.style.display = 'none';
+            } else {
+                modalVolume.style.display = 'none';
+                modalFullscreen.style.display = 'inline-flex';
+                modalFullscreen.onclick = () => {
+                    const firstMedia = mediaWrapper.querySelector('img');
+                    if (firstMedia && firstMedia.requestFullscreen) {
+                        firstMedia.requestFullscreen();
+                    }
+                };
+            }
+
+            projectModal.hidden = false;
+            projectModal.classList.add('open');
+            document.body.classList.add('no-scroll');
+        }
+
+        document.querySelectorAll('.project-card summary').forEach((summary) => {
+            summary.addEventListener('click', (event) => {
+                event.preventDefault();
+                const card = summary.closest('.project-card');
+                if (card) {
+                    openCardModal(card);
+                }
+            });
+        });
+
+        modalClose.addEventListener('click', closeModal);
+        modalBackdrop.addEventListener('click', closeModal);
+        window.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && !projectModal.hidden) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+

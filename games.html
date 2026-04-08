@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <title>Games | Portfolio</title>
+</head>
+<body>
+    <div class="page-shell">
+        <canvas id="threejs-bg"></canvas>
+        <header class="site-header">
+            <div class="brand-row">
+                <a class="brand" href="index.html">
+                    <img src="logo.png" alt="Games logo" class="logo">
+                    <div class="brand-title">
+                        <h1>Nadeesh Jeyashankar</h1>
+                    </div>
+                </a>
+                <nav class="site-nav">
+                    <a href="index.html">Home</a>
+                    <a href="portfolio.html">3D Animation & VFX</a>
+                    <a href="vr.html">VR</a>
+                    <a href="games.html" class="active">Games</a>
+                    <a href="film.html">Film</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero-copy">
+                    <span class="eyebrow">Game projects</span>
+                    <h1>Real-time game experiences with cinematic presentation.</h1>
+                    <p>Focused on environment quality, interaction flow, and narrative-driven visual communication.</p>
+                    <div class="hero-actions">
+                        <a href="#game-projects" class="btn primary">View games</a>
+                        <a href="contact.html" class="btn secondary">Contact</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="game-projects" class="section">
+                <div class="section-title">
+                    <h2>Games</h2>
+                </div>
+                <div class="project-grid">
+                    <article class="project-card">
+                        <details>
+                            <summary>
+                                <h3>Remnants</h3>
+                                <p>Exploration game with cinematic visuals and interactive storytelling.</p>
+                                <div class="software-tags">
+                                    <div class="software-tag">
+                                        <img src="software%20logo/unreal-logo.png" alt="Unreal Engine">
+                                        <span>Unreal Engine</span>
+                                    </div>
+                                    <div class="software-tag">
+                                        <img src="software%20logo/DaVinci-logo.png" alt="DaVinci Resolve">
+                                        <span>DaVinci Resolve</span>
+                                    </div>
+                                </div>
+                                <img src="https://img.youtube.com/vi/uiGOOLXjN6I/maxresdefault.jpg" alt="Remnants Game Preview" class="media-preview">
+                            </summary>
+                            <div class="details-content">
+                                <p>Remnants is a narrative-driven exploration prototype developed in Unreal Engine with a focus on environmental storytelling, pacing, and player-led discovery. The project was built to test how visual composition, movement flow, and interaction cues can guide users through a scene without heavy UI direction.</p>
+                                <p>The core production pipeline covered level blockout, environment assembly, lighting iterations, and cinematic sequencing for key moments. Particular attention was given to atmosphere and readability so that each area communicates progression through layout, contrast, and focal framing rather than explicit prompts.</p>
+                                <p>As documented in the project report, the prototype was also presented in an exhibition setting for the Goldsmiths DAC 2025 Year 2 final show. This helped evaluate audience response in a public display context, including how players engage with exploration mechanics and how clearly the narrative tone is communicated from short play sessions.</p>
+                                <div class="vr-highlight-list">
+                                    <span>Unreal Engine prototype</span>
+                                    <span>Environmental storytelling</span>
+                                    <span>Cinematic sequencing</span>
+                                    <span>Exhibition-tested (DAC 2025)</span>
+                                </div>
+                                <div class="media-container">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/uiGOOLXjN6I?autoplay=1&mute=1&loop=1&playlist=uiGOOLXjN6I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                                <p class="media-caption">Cinematic Sequence</p>
+                                <div class="media-container">
+                                    <video controls playsinline preload="metadata" loop muted autoplay>
+                                        <source src="3D/Screen%20Recording.mp4" type="video/mp4">
+                                        Your browser does not support this video.
+                                    </video>
+                                </div>
+                                <p class="media-caption">Screen Recording of the gameplay</p>
+                                <div class="media-container">
+                                    <video controls playsinline preload="metadata" loop muted autoplay>
+                                        <source src="3D/Exhibition%20recording.mp4" type="video/mp4">
+                                        Your browser does not support this video.
+                                    </video>
+                                </div>
+                                <p class="media-caption">Exhibition recording from the Year 2 final show at Goldsmiths DAC 2025</p>
+                                <div class="media-container">
+                                    <iframe class="project-doc-frame" src="Remnants-Game-Prototype-Documentation.pdf#view=FitH&page=1" title="Remnants project documentation" loading="lazy"></iframe>
+                                </div>
+                                <p class="media-caption">Project documentation (design goals, implementation notes, and production context)</p>
+                                <div class="hero-actions">
+                                    <a href="Remnants-Game-Prototype-Documentation.pdf" class="btn primary" target="_blank" rel="noopener noreferrer">Open documentation</a>
+                                    <a href="Remnants-Game-Prototype-Documentation.pdf" class="btn secondary" download>Download documentation</a>
+                                </div>
+                            </div>
+                        </details>
+                    </article>
+                    <article class="project-card">
+                        <details>
+                            <summary>
+                                <h3>Unity Game Trial 1</h3>
+                                <p>A simple Unity exploration project featuring a house layout with interactive doors.</p>
+                                <div class="software-tags">
+                                    <div class="software-tag">
+                                        <img src="software%20logo/unity-logo.png" alt="Unity">
+                                        <span>Unity</span>
+                                    </div>
+                                </div>
+                                <div class="media-preview media-preview-placeholder">Unity exploration prototype</div>
+                            </summary>
+                            <div class="details-content">
+                                <p>Unity Game Trial 1 is a simple environmental exploration prototype built around a small house interior containing a kitchen, hall, bedroom, and toilet. The focus of the project is spatial layout, first-person movement, and interaction with a functioning door system to explore how players navigate and respond to small domestic spaces in real time.</p>
+                                <div class="vr-highlight-list">
+                                    <span>House exploration</span>
+                                    <span>Kitchen + hall + room + toilet</span>
+                                    <span>Interactive door logic</span>
+                                    <span>Unity prototype</span>
+                                </div>
+                                <p class="media-caption">Media for this prototype can be added here when you share a recording or screenshot.</p>
+                            </div>
+                        </details>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-brand">Games</div>
+            <div>Real-time environments and interactive storytelling.</div>
+        </footer>
+    </div>
+
+    <div class="project-modal" id="projectModal" hidden>
+        <div class="modal-backdrop" id="modalBackdrop"></div>
+        <div class="modal-shell">
+            <button class="modal-close" id="modalClose" aria-label="Close project preview">×</button>
+            <div class="modal-layout">
+                <div class="modal-media" id="modalMedia"></div>
+                <div class="modal-copy">
+                    <span class="eyebrow">Project preview</span>
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalDescription"></p>
+                    <div class="modal-meta-wrap">
+                        <span class="meta">Software used</span>
+                        <div id="modalSoftware" class="software-tags"></div>
+                    </div>
+                    <div class="modal-actions">
+                        <button class="btn secondary" id="modalVolume">Unmute</button>
+                        <button class="btn secondary" id="modalFullscreen">Fullscreen</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (async function initPortfolioBackground() {
+            const canvas = document.getElementById('threejs-bg');
+            if (!canvas) return;
+
+            const warmTubeColors = ['#ff9e4d', '#ffcf75', '#ff7a4a', '#e98cff'];
+            const warmLightColors = ['#ffb366', '#ff8a4a', '#ffd27a', '#d389ff'];
+
+            try {
+                const module = await import('https://cdn.jsdelivr.net/npm/threejs-components@0.0.19/build/cursors/tubes1.min.js');
+                const TubesCursor = module.default;
+
+                const app = TubesCursor(canvas, {
+                    tubes: {
+                        colors: warmTubeColors,
+                        lights: {
+                            intensity: 130,
+                            colors: warmLightColors
+                        }
+                    }
+                });
+
+                document.addEventListener('visibilitychange', () => {
+                    if (document.hidden) {
+                        app?.tubes?.setLightsColors(['#000000', '#000000', '#000000', '#000000']);
+                    } else {
+                        app?.tubes?.setLightsColors(warmLightColors);
+                    }
+                });
+            } catch (error) {
+                const scene = new THREE.Scene();
+                const camera = new THREE.PerspectiveCamera(72, window.innerWidth / window.innerHeight, 0.1, 1000);
+                const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+                renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+                renderer.setSize(window.innerWidth, window.innerHeight);
+
+                const mouse = new THREE.Vector2();
+                const target = new THREE.Vector2();
+                const colors = [0xff9e4d, 0xffcf75, 0xff7a4a, 0xe98cff];
+
+                class Trail {
+                    constructor(color, phase) {
+                        this.phase = phase;
+                        this.max = 34;
+                        this.points = Array.from({ length: this.max }, (_, i) => new THREE.Vector3(0, 0, -i * 0.08));
+                        this.geometry = new THREE.BufferGeometry();
+                        this.glowGeometry = new THREE.BufferGeometry();
+                        this.line = new THREE.Line(this.geometry, new THREE.LineBasicMaterial({ color, transparent: true, opacity: 0.32 }));
+                        this.glow = new THREE.Line(this.glowGeometry, new THREE.LineBasicMaterial({ color, transparent: true, opacity: 0.10 }));
+                        scene.add(this.glow);
+                        scene.add(this.line);
+                        this.refresh();
+                    }
+                    update(time) {
+                        const t = time * 0.001;
+                        this.points.unshift(new THREE.Vector3(
+                            target.x * 4.5 + Math.sin(t * 2 + this.phase) * 0.12,
+                            target.y * 3.0 + Math.cos(t * 1.7 + this.phase) * 0.10,
+                            Math.sin(t + this.phase) * 0.22
+                        ));
+                        this.points.length = this.max;
+                        for (let i = 1; i < this.points.length; i++) this.points[i].z = -i * 0.08;
+                        this.refresh();
+                    }
+                    refresh() {
+                        const arr = [];
+                        this.points.forEach((p) => arr.push(p.x, p.y, p.z));
+                        this.geometry.setAttribute('position', new THREE.Float32BufferAttribute(arr, 3));
+                        this.glowGeometry.setAttribute('position', new THREE.Float32BufferAttribute(arr, 3));
+                    }
+                }
+
+                const trails = colors.map((c, i) => new Trail(c, i * 0.9));
+                camera.position.z = 6;
+
+                document.addEventListener('mousemove', (e) => {
+                    mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
+                    mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
+                });
+
+                function loop() {
+                    requestAnimationFrame(loop);
+                    const now = Date.now();
+                    target.lerp(mouse, 0.08);
+                    trails.forEach((t) => t.update(now));
+                    camera.position.x = target.x * 0.3;
+                    camera.position.y = target.y * 0.22;
+                    camera.lookAt(0, 0, 0);
+                    renderer.render(scene, camera);
+                }
+                loop();
+
+                window.addEventListener('resize', () => {
+                    camera.aspect = window.innerWidth / window.innerHeight;
+                    camera.updateProjectionMatrix();
+                    renderer.setSize(window.innerWidth, window.innerHeight);
+                });
+            }
+        })();
+
+        const projectModal = document.getElementById('projectModal');
+        const modalBackdrop = document.getElementById('modalBackdrop');
+        const modalClose = document.getElementById('modalClose');
+        const modalMedia = document.getElementById('modalMedia');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDescription = document.getElementById('modalDescription');
+        const modalSoftware = document.getElementById('modalSoftware');
+        const modalVolume = document.getElementById('modalVolume');
+        const modalFullscreen = document.getElementById('modalFullscreen');
+
+        function closeModal() {
+            projectModal.hidden = true;
+            projectModal.classList.remove('open');
+            document.body.classList.remove('no-scroll');
+            modalMedia.innerHTML = '';
+        }
+
+        function buildModalMedia(sources) {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'modal-media-group';
+
+            if (!sources || sources.length === 0) {
+                const placeholder = document.createElement('div');
+                placeholder.textContent = 'Media unavailable';
+                wrapper.appendChild(placeholder);
+                return wrapper;
+            }
+
+            sources.forEach((source) => {
+                if (source.tagName === 'VIDEO') {
+                    const video = document.createElement('video');
+                    video.controls = true;
+                    video.playsInline = true;
+                    video.preload = 'metadata';
+                    video.loop = true;
+                    video.muted = true;
+                    video.autoplay = true;
+                    video.className = 'modal-video';
+                    source.querySelectorAll('source').forEach((src) => {
+                        const s = document.createElement('source');
+                        s.src = src.src;
+                        s.type = src.type;
+                        video.appendChild(s);
+                    });
+                    video.addEventListener('click', () => {
+                        if (video.requestFullscreen) video.requestFullscreen();
+                    });
+                    video.addEventListener('loadedmetadata', () => {
+                        video.play().catch(() => {});
+                    });
+                    wrapper.appendChild(video);
+                } else if (source.tagName === 'IFRAME') {
+                    const iframe = document.createElement('iframe');
+                    iframe.src = source.src;
+                    iframe.width = source.width || '560';
+                    iframe.height = source.height || '315';
+                    iframe.frameBorder = '0';
+                    iframe.allow = source.allow || 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+                    iframe.allowFullscreen = true;
+                    iframe.className = 'modal-iframe';
+                    wrapper.appendChild(iframe);
+                } else if (source.tagName === 'IMG') {
+                    const img = document.createElement('img');
+                    img.src = source.src;
+                    img.alt = source.alt || '';
+                    img.loading = 'lazy';
+                    img.className = 'modal-image';
+                    img.addEventListener('click', () => {
+                        if (img.requestFullscreen) img.requestFullscreen();
+                    });
+                    wrapper.appendChild(img);
+                }
+            });
+
+            return wrapper;
+        }
+
+        function openCardModal(card) {
+            const summary = card.querySelector('summary');
+            const title = summary.querySelector('h3')?.textContent.trim() || '';
+            const description = card.querySelector('.details-content p')?.textContent.trim() || '';
+            const softwareTagElements = summary.querySelectorAll('.software-tag');
+            const sourceMedia = card.querySelectorAll('.details-content .media-container > *');
+            const mediaWrapper = buildModalMedia(sourceMedia);
+
+            modalTitle.textContent = title;
+            modalDescription.textContent = description;
+            modalSoftware.innerHTML = '';
+            softwareTagElements.forEach(tag => modalSoftware.appendChild(tag.cloneNode(true)));
+            modalMedia.innerHTML = '';
+            modalMedia.appendChild(mediaWrapper);
+
+            const videos = mediaWrapper.querySelectorAll('video');
+            const iframes = mediaWrapper.querySelectorAll('iframe');
+            if (videos.length > 0) {
+                modalVolume.style.display = 'inline-flex';
+                modalVolume.textContent = videos[0].muted ? 'Unmute' : 'Mute';
+                modalFullscreen.style.display = 'inline-flex';
+                modalFullscreen.onclick = () => {
+                    if (videos[0].requestFullscreen) videos[0].requestFullscreen();
+                };
+                modalVolume.onclick = () => {
+                    const muted = !videos[0].muted;
+                    videos.forEach((v) => { v.muted = muted; if (!muted) v.play().catch(() => {}); });
+                    modalVolume.textContent = muted ? 'Unmute' : 'Mute';
+                };
+            } else if (iframes.length > 0) {
+                modalVolume.style.display = 'none';
+                modalFullscreen.style.display = 'none';
+            } else {
+                modalVolume.style.display = 'none';
+                modalFullscreen.style.display = 'inline-flex';
+                modalFullscreen.onclick = () => {
+                    const firstMedia = mediaWrapper.querySelector('img');
+                    if (firstMedia && firstMedia.requestFullscreen) firstMedia.requestFullscreen();
+                };
+            }
+
+            projectModal.hidden = false;
+            projectModal.classList.add('open');
+            document.body.classList.add('no-scroll');
+        }
+
+        document.querySelectorAll('.project-card summary').forEach((summary) => {
+            summary.addEventListener('click', (event) => {
+                event.preventDefault();
+                const card = summary.closest('.project-card');
+                if (card) openCardModal(card);
+            });
+        });
+
+        modalClose.addEventListener('click', closeModal);
+        modalBackdrop.addEventListener('click', closeModal);
+        window.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && !projectModal.hidden) closeModal();
+        });
+    </script>
+</body>
+</html>

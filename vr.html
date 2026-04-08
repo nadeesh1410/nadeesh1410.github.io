@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <title>VR | Portfolio</title>
+</head>
+<body class="vr-page">
+    <div class="page-shell">
+        <canvas id="threejs-bg"></canvas>
+        <header class="site-header">
+            <div class="brand-row">
+                <a class="brand" href="index.html">
+                    <img src="logo.png" alt="VR logo" class="logo">
+                    <div class="brand-title">
+                        <h1>Nadeesh Jeyashankar</h1>
+                    </div>
+                </a>
+                <nav class="site-nav">
+                    <a href="index.html">Home</a>
+                    <a href="portfolio.html">3D Animation & VFX</a>
+                    <a href="vr.html" class="active">VR</a>
+                    <a href="games.html">Games</a>
+                    <a href="film.html">Film</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero-copy">
+                    <span class="eyebrow">VR projects</span>
+                    <h1>Immersive educational and interaction-driven virtual reality work.</h1>
+                    <p>Focused on clarity, usability, and technical implementation for learning-driven VR experiences.</p>
+                    <div class="hero-actions">
+                        <a href="#vr-projects" class="btn primary">View projects</a>
+                        <a href="contact.html" class="btn secondary">Collaborate</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="vr-projects" class="section">
+                <div class="section-title">
+                    <span class="eyebrow">Featured project</span>
+                    <h2>Anatomy Lab</h2>
+                    <p>A structured VR case study that combines educational design, real-time interaction, and presentable project documentation.</p>
+                </div>
+                <div class="project-grid">
+                    <article class="project-card">
+                        <details open>
+                            <summary>
+                                <h3>Anatomy Lab (VR Learning Experience)</h3>
+                                <p>A VR anatomy learning space with real-time interaction feedback and guided object inspection.</p>
+                                <div class="software-tags">
+                                    <div class="software-tag">
+                                        <img src="software%20logo/unity-logo.png" alt="Unity">
+                                        <span>Unity</span>
+                                    </div>
+                                    <div class="software-tag">
+                                        <img src="software%20logo/blender-logo.png" alt="Blender">
+                                        <span>Blender</span>
+                                    </div>
+                                </div>
+                                <div class="vr-highlight-list">
+                                    <span>Educational UX</span>
+                                    <span>Snap interaction logic</span>
+                                    <span>Unity implementation</span>
+                                    <span>Z-Anatomy sourced assets</span>
+                                </div>
+                            </summary>
+                            <div class="details-content">
+                                <div class="vr-project-layout">
+                                    <div class="vr-project-copy">
+                                        <section class="vr-copy-block">
+                                            <span class="eyebrow">Project overview</span>
+                                            <p>Anatomy Lab is a VR educational experience designed to help students study anatomical structures in an interactive 3D space. Users can physically approach and inspect body systems, receive immediate visual feedback on selected structures, and scale smaller components for close analysis. Each object includes a dedicated menu panel displaying its name, key function, and supporting description so the learning flow stays clear during interaction.</p>
+                                        </section>
+
+                                        <section class="vr-copy-block">
+                                            <span class="eyebrow">Team + contribution</span>
+                                            <p>This was developed as a group project with Hamza Rahman and Max Pavek. My responsibilities included sourcing medically accurate structures from the Z-Anatomy library, validating model quality and naming consistency for teaching use, and implementing snap logic for bones. The snap system detects proximity to the original skeleton target position and assists placement while the user is already handling other components, improving both usability and assembly accuracy in VR.</p>
+                                        </section>
+
+                                        <section class="vr-copy-block">
+                                            <span class="eyebrow">Academic context</span>
+                                            <p>For university submission context: this project demonstrates research-led asset selection, collaborative production workflow, interaction design for educational objectives, and implementation of assistive spatial mechanics. The focus was not only technical interaction but also pedagogical clarity, ensuring users can learn structure relationships through direct manipulation, contextual labeling, and guided assembly behavior.</p>
+                                        </section>
+                                    </div>
+
+                                    <aside class="vr-project-media">
+                                        <div class="vr-media-card">
+                                            <div class="media-container">
+                                                <video controls playsinline preload="metadata" loop muted autoplay>
+                                                    <source src="VR%20project/DEMO.mp4" type="video/mp4">
+                                                    Your browser does not support this video.
+                                                </video>
+                                            </div>
+                                            <p>Recorded demo showing the VR learning flow, interaction feedback, and anatomy object handling.</p>
+                                        </div>
+
+                                        <div class="vr-media-card">
+                                            <div class="media-container">
+                                                <iframe class="vr-presentation-frame" src="VR%20project/Presentation.pdf#view=FitH&page=1" title="Anatomy Lab presentation preview" loading="lazy"></iframe>
+                                            </div>
+                                            <p>Project presentation covering concept, production workflow, and outcome summary.</p>
+                                            <div class="hero-actions">
+                                                <a href="VR%20project/Presentation.pdf" class="btn primary" target="_blank" rel="noopener noreferrer">Open presentation</a>
+                                                <a href="VR%20project/Presentation.pdf" class="btn secondary" download>Download presentation</a>
+                                            </div>
+                                        </div>
+                                    </aside>
+                                </div>
+                            </div>
+                        </details>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-brand">VR Portfolio</div>
+            <div>Interaction design, educational simulation and real-time implementation.</div>
+        </footer>
+    </div>
+    <script>
+        (async function initPortfolioBackground() {
+            const canvas = document.getElementById('threejs-bg');
+            if (!canvas) return;
+
+            const warmTubeColors = ['#ff9e4d', '#ffcf75', '#ff7a4a', '#e98cff'];
+            const warmLightColors = ['#ffb366', '#ff8a4a', '#ffd27a', '#d389ff'];
+
+            try {
+                const module = await import('https://cdn.jsdelivr.net/npm/threejs-components@0.0.19/build/cursors/tubes1.min.js');
+                const TubesCursor = module.default;
+
+                const app = TubesCursor(canvas, {
+                    tubes: {
+                        colors: warmTubeColors,
+                        lights: {
+                            intensity: 130,
+                            colors: warmLightColors
+                        }
+                    }
+                });
+
+                document.addEventListener('visibilitychange', () => {
+                    if (document.hidden) {
+                        app?.tubes?.setLightsColors(['#000000', '#000000', '#000000', '#000000']);
+                    } else {
+                        app?.tubes?.setLightsColors(warmLightColors);
+                    }
+                });
+            } catch (error) {
+                const scene = new THREE.Scene();
+                const camera = new THREE.PerspectiveCamera(72, window.innerWidth / window.innerHeight, 0.1, 1000);
+                const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+                renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+                renderer.setSize(window.innerWidth, window.innerHeight);
+
+                const mouse = new THREE.Vector2();
+                const target = new THREE.Vector2();
+                const colors = [0xff9e4d, 0xffcf75, 0xff7a4a, 0xe98cff];
+
+                class Trail {
+                    constructor(color, phase) {
+                        this.phase = phase;
+                        this.max = 34;
+                        this.points = Array.from({ length: this.max }, (_, i) => new THREE.Vector3(0, 0, -i * 0.08));
+                        this.geometry = new THREE.BufferGeometry();
+                        this.glowGeometry = new THREE.BufferGeometry();
+                        this.line = new THREE.Line(this.geometry, new THREE.LineBasicMaterial({ color, transparent: true, opacity: 0.32 }));
+                        this.glow = new THREE.Line(this.glowGeometry, new THREE.LineBasicMaterial({ color, transparent: true, opacity: 0.10 }));
+                        scene.add(this.glow);
+                        scene.add(this.line);
+                        this.refresh();
+                    }
+                    update(time) {
+                        const t = time * 0.001;
+                        this.points.unshift(new THREE.Vector3(
+                            target.x * 4.5 + Math.sin(t * 2 + this.phase) * 0.12,
+                            target.y * 3.0 + Math.cos(t * 1.7 + this.phase) * 0.10,
+                            Math.sin(t + this.phase) * 0.22
+                        ));
+                        this.points.length = this.max;
+                        for (let i = 1; i < this.points.length; i++) this.points[i].z = -i * 0.08;
+                        this.refresh();
+                    }
+                    refresh() {
+                        const arr = [];
+                        this.points.forEach((p) => arr.push(p.x, p.y, p.z));
+                        this.geometry.setAttribute('position', new THREE.Float32BufferAttribute(arr, 3));
+                        this.glowGeometry.setAttribute('position', new THREE.Float32BufferAttribute(arr, 3));
+                    }
+                }
+
+                const trails = colors.map((c, i) => new Trail(c, i * 0.9));
+                camera.position.z = 6;
+
+                document.addEventListener('mousemove', (e) => {
+                    mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
+                    mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
+                });
+
+                function loop() {
+                    requestAnimationFrame(loop);
+                    const now = Date.now();
+                    target.lerp(mouse, 0.08);
+                    trails.forEach((t) => t.update(now));
+                    camera.position.x = target.x * 0.3;
+                    camera.position.y = target.y * 0.22;
+                    camera.lookAt(0, 0, 0);
+                    renderer.render(scene, camera);
+                }
+                loop();
+
+                window.addEventListener('resize', () => {
+                    camera.aspect = window.innerWidth / window.innerHeight;
+                    camera.updateProjectionMatrix();
+                    renderer.setSize(window.innerWidth, window.innerHeight);
+                });
+            }
+        })();
+    </script>
+</body>
+</html>

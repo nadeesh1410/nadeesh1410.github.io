@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- Contact page with clear studio hiring details -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Contact | 3D Animation & VFX</title>
+</head>
+<body>
+    <div class="page-shell">
+        <header class="site-header">
+            <div class="brand-row">
+                <a class="brand" href="index.html">
+                    <img src="logo.png" alt="Contact logo" class="logo">
+                    <div class="brand-title">
+                        <h1>Nadeesh Jeyashankar</h1>
+                    </div>
+                </a>
+                <nav class="site-nav">
+                    <a href="index.html">Home</a>
+                    <a href="portfolio.html">3D Animation & VFX</a>
+                    <a href="vr.html">VR</a>
+                    <a href="games.html">Games</a>
+                    <a href="film.html">Film</a>
+                    <a href="contact.html" class="active">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero-copy">
+                    <span class="eyebrow">Let's connect</span>
+                    <h1>Open to studio roles, freelance and collaboration.</h1>
+                    <p>I bring pipeline-aware 3D modelling, simulation, real-time visuals and film-ready FX to every project with a professional delivery mindset.</p>
+                </div>
+                <div class="hero-panel">
+                    <h2>Contact</h2>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" value="nadeeshjeyashankar@gmail.com" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary">Send Email</button>
+                    </form>
+                    <div class="social-links">
+                        <h3>Follow me</h3>
+                        <p><a href="https://instagram.com/nadeeshjeyashankar" target="_blank">@nadeeshjeyashankar</a></p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-brand">Ready for work</div>
+            <div>3D assets, FX and film-ready deliverables.</div>
+        </footer>
+    </div>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Encode the subject and message for URL
+            const encodedSubject = encodeURIComponent(subject);
+            const encodedMessage = encodeURIComponent(message);
+            
+            // Create mailto link
+            const mailtoLink = `mailto:nadeeshjeyashankar@gmail.com?subject=${encodedSubject}&body=${encodedMessage}`;
+            
+            // Open the user's email client
+            window.location.href = mailtoLink;
+        });
+    </script>
+</body>
+</html>

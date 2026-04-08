@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<!-- Home page for Nadeesh J.'s 3D animation and VFX portfolio -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <title>Nadeesh Jeyashankar Portfolio</title>
+</head>
+<body class="home-page">
+    <div class="page-shell">
+        <header class="site-header">
+            <div class="brand-row">
+                <a class="brand" href="index.html">
+                    <img src="logo.png" alt="Nadeesh logo" class="logo">
+                    <div class="brand-title">
+                        <h1>Nadeesh Jeyashankar</h1>
+                    </div>
+                </a>
+                <nav class="site-nav">
+                    <a href="index.html" class="active">Home</a>
+                    <a href="portfolio.html">3D Animation & VFX</a>
+                    <a href="vr.html">VR</a>
+                    <a href="games.html">Games</a>
+                    <a href="film.html">Film</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero-copy">
+                    <span class="eyebrow">Welcome to my portfolio</span>
+                    <h1>Nadeesh Jeyashankar</h1>
+                    <p>3D Artist specializing in animation, visual effects, VR, games, and film production.</p>
+                    <div class="hero-actions">
+                        <a href="portfolio.html" class="btn primary">View portfolio</a>
+                        <a href="contact.html" class="btn secondary">Contact</a>
+                    </div>
+                </div>
+                <canvas id="threejs-bg"></canvas>
+            </section>
+
+            <section class="section">
+                <div class="section-title">
+                    <span class="eyebrow">What I deliver</span>
+                    <h2>Production-ready work with strong visual direction.</h2>
+                </div>
+                <div class="grid-3">
+                    <article class="card">
+                        <h3>3D Modelling</h3>
+                        <p>Characters, environments and hard-surface assets with clean topology and efficient UVs.</p>
+                    </article>
+                    <article class="card">
+                        <h3>FX & Simulation</h3>
+                        <p>Particle, fluid and destruction effects built for cinematic shots and compositing pipelines.</p>
+                    </article>
+                    <article class="card">
+                        <h3>VR & Real-Time</h3>
+                        <p>Optimized assets and technical visuals created for real-time performance and immersive experiences.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="section-title">
+                    <span class="eyebrow">About</span>
+                    <h2>Experienced in digital art, VFX and real-time pipelines.</h2>
+                </div>
+                <div class="grid-2">
+                    <article class="card">
+                        <h3>Career focus</h3>
+                        <p>Student in Digital Arts Computing at Goldsmiths, specializing in 3D animation, VFX, and real-time pipelines with strong interests in animation, simulation, VR, and game development.</p>
+                    </article>
+                    <article class="card">
+                        <h3>What I offer</h3>
+                        <p>Production-ready assets, clean simulations, cinematic visuals and collaborative communication for studio projects.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="section-title">
+                    <span class="eyebrow">Skills</span>
+                    <h2>Tools and software I use for 3D, VFX, and post-production.</h2>
+                </div>
+                <div class="software-carousel">
+                    <div class="carousel-track">
+                        <div class="skill-item">
+                            <img src="software%20logo/blender-logo.png" alt="Blender logo" class="software-logo">
+                            <h3>Blender</h3>
+                            <p>3D modelling, FX, lighting & rendering.</p>
+                        </div>
+                        <div class="skill-item">
+                            <img src="software%20logo/unreal-logo.png" alt="Unreal Engine logo" class="software-logo">
+                            <h3>Unreal Engine</h3>
+                            <p>Lighting, environment creation and real-time visuals.</p>
+                        </div>
+                        <div class="skill-item">
+                            <img src="software%20logo/unity-logo.png" alt="Unity logo" class="software-logo">
+                            <h3>Unity</h3>
+                            <p>VR development, optimization and interactive experiences.</p>
+                        </div>
+                        <div class="skill-item">
+                            <img src="software%20logo/maya-logo.png" alt="Maya logo" class="software-logo">
+                            <h3>Maya</h3>
+                            <p>Modelling, texturing, rigging & lighting.</p>
+                        </div>
+                        <div class="skill-item">
+                            <img src="software%20logo/DaVinci-logo.png" alt="DaVinci Resolve logo" class="software-logo">
+                            <h3>DaVinci Resolve</h3>
+                            <p>Editing, colour grading and film finishing.</p>
+                        </div>
+                        <div class="skill-item">
+                            <img src="software%20logo/photoshop-logo.png" alt="Photoshop logo" class="software-logo">
+                            <h3>Photoshop</h3>
+                            <p>Photo editing, texture creation and asset polish.</p>
+                        </div>
+                        <div class="skill-item">
+                            <img src="software%20logo/lightroom-logo.png" alt="Lightroom logo" class="software-logo">
+                            <h3>Lightroom</h3>
+                            <p>Photo editing, colour control and visual refinement.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="site-footer">
+            <div class="footer-brand">Contact</div>
+            <a class="footer-link" href="contact.html">Get in touch</a>
+        </footer>
+    </div>
+    <script>
+        const homeHeader = document.querySelector('.site-header');
+
+        function updateHomeHeaderVisibility() {
+            if (!homeHeader) return;
+            if (window.scrollY < 70) {
+                homeHeader.classList.add('hidden-on-top');
+            } else {
+                homeHeader.classList.remove('hidden-on-top');
+            }
+        }
+
+        updateHomeHeaderVisibility();
+        window.addEventListener('scroll', updateHomeHeaderVisibility, { passive: true });
+
+        // Tubes-like background adapted to warm/dark portfolio theme.
+        (async function initHomeBackground() {
+            const canvas = document.getElementById('threejs-bg');
+            if (!canvas) return;
+
+            const warmTubeColors = ['#ff9e4d', '#ffcf75', '#ff7a4a', '#e98cff'];
+            const warmLightColors = ['#ffb366', '#ff8a4a', '#ffd27a', '#d389ff'];
+
+            try {
+                const module = await import('https://cdn.jsdelivr.net/npm/threejs-components@0.0.19/build/cursors/tubes1.min.js');
+                const TubesCursor = module.default;
+
+                const app = TubesCursor(canvas, {
+                    tubes: {
+                        colors: warmTubeColors,
+                        lights: {
+                            intensity: 130,
+                            colors: warmLightColors
+                        }
+                    }
+                });
+
+                document.addEventListener('visibilitychange', () => {
+                    if (document.hidden) {
+                        app?.tubes?.setLightsColors(['#000000', '#000000', '#000000', '#000000']);
+                    } else {
+                        app?.tubes?.setLightsColors(warmLightColors);
+                    }
+                });
+            } catch (error) {
+                const scene = new THREE.Scene();
+                const camera = new THREE.PerspectiveCamera(72, window.innerWidth / window.innerHeight, 0.1, 1000);
+                const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+                renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+                renderer.setSize(window.innerWidth, window.innerHeight);
+
+                const mouse = new THREE.Vector2();
+                const target = new THREE.Vector2();
+                const colors = [0xff9e4d, 0xffcf75, 0xff7a4a, 0xe98cff];
+
+                class Trail {
+                    constructor(color, phase) {
+                        this.phase = phase;
+                        this.max = 34;
+                        this.points = Array.from({ length: this.max }, (_, i) => new THREE.Vector3(0, 0, -i * 0.08));
+                        this.geometry = new THREE.BufferGeometry();
+                        this.glowGeometry = new THREE.BufferGeometry();
+                        this.line = new THREE.Line(this.geometry, new THREE.LineBasicMaterial({ color, transparent: true, opacity: 0.32 }));
+                        this.glow = new THREE.Line(this.glowGeometry, new THREE.LineBasicMaterial({ color, transparent: true, opacity: 0.10 }));
+                        scene.add(this.glow);
+                        scene.add(this.line);
+                        this.refresh();
+                    }
+                    update(time) {
+                        const t = time * 0.001;
+                        this.points.unshift(new THREE.Vector3(
+                            target.x * 4.5 + Math.sin(t * 2 + this.phase) * 0.12,
+                            target.y * 3.0 + Math.cos(t * 1.7 + this.phase) * 0.10,
+                            Math.sin(t + this.phase) * 0.22
+                        ));
+                        this.points.length = this.max;
+                        for (let i = 1; i < this.points.length; i++) this.points[i].z = -i * 0.08;
+                        this.refresh();
+                    }
+                    refresh() {
+                        const arr = [];
+                        this.points.forEach((p) => arr.push(p.x, p.y, p.z));
+                        this.geometry.setAttribute('position', new THREE.Float32BufferAttribute(arr, 3));
+                        this.glowGeometry.setAttribute('position', new THREE.Float32BufferAttribute(arr, 3));
+                    }
+                }
+
+                const trails = colors.map((c, i) => new Trail(c, i * 0.9));
+                camera.position.z = 6;
+
+                document.addEventListener('mousemove', (e) => {
+                    mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
+                    mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
+                });
+
+                function loop() {
+                    requestAnimationFrame(loop);
+                    const now = Date.now();
+                    target.lerp(mouse, 0.08);
+                    trails.forEach((t) => t.update(now));
+                    camera.position.x = target.x * 0.3;
+                    camera.position.y = target.y * 0.22;
+                    camera.lookAt(0, 0, 0);
+                    renderer.render(scene, camera);
+                }
+                loop();
+
+                window.addEventListener('resize', () => {
+                    camera.aspect = window.innerWidth / window.innerHeight;
+                    camera.updateProjectionMatrix();
+                    renderer.setSize(window.innerWidth, window.innerHeight);
+                });
+            }
+        })();
+
+        // Interactive software carousel
+        const carousel = document.querySelector('.software-carousel');
+        const track = document.querySelector('.carousel-track');
+
+        // Duplicate items for seamless loop
+        const originalItems = Array.from(track.children);
+        originalItems.forEach(item => {
+            const clone = item.cloneNode(true);
+            track.appendChild(clone);
+        });
+
+        let isDragging = false;
+        let isPaused = false;
+        let startPos = 0;
+        let scrollLeft = 0;
+        let currentTranslate = 0;
+        let animationId = 0;
+        let autoScrollId = 0;
+        let lastTime = 0;
+        const scrollSpeed = 0.5; // Pixels per frame - slower for smoother movement
+        const itemWidth = 312; // 280px item + 32px gap
+        const totalOriginalItems = originalItems.length;
+
+        // Auto-scroll function with smooth animation
+        function autoScroll(currentTime = 0) {
+            if (!isDragging && !isPaused) {
+                const deltaTime = currentTime - lastTime;
+                if (deltaTime > 16) { // Cap at ~60fps
+                    currentTranslate -= scrollSpeed;
+
+                    // Reset position for seamless loop when reaching the duplicate section
+                    if (currentTranslate <= -itemWidth * totalOriginalItems) {
+                        currentTranslate = 0;
+                    }
+
+                    setTranslate(currentTranslate);
+                    lastTime = currentTime;
+                }
+            }
+            autoScrollId = requestAnimationFrame(autoScroll);
+        }
+
+        // Start auto-scrolling
+        autoScroll();
+
+        // Pause on hover
+        carousel.addEventListener('mouseenter', () => {
+            isPaused = true;
+            carousel.style.cursor = 'grab';
+        });
+
+        carousel.addEventListener('mouseleave', () => {
+            if (!isDragging) {
+                isPaused = false;
+                carousel.style.cursor = 'default';
+            }
+        });
+
+        // Mouse events for dragging
+        carousel.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            isPaused = true;
+            startPos = e.pageX - carousel.offsetLeft;
+            scrollLeft = currentTranslate;
+            carousel.style.cursor = 'grabbing';
+        });
+
+        carousel.addEventListener('mouseup', () => {
+            isDragging = false;
+            carousel.style.cursor = 'grab';
+            setTimeout(() => { isPaused = false; }, 500); // Resume after 0.5 second
+        });
+
+        carousel.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            e.preventDefault();
+            const x = e.pageX - carousel.offsetLeft;
+            const walk = (x - startPos) * 1.5; // More responsive dragging
+            currentTranslate = scrollLeft + walk;
+
+            // Allow reasonable drag bounds
+            const maxTranslate = itemWidth * 2; // Allow some forward dragging
+            const minTranslate = -itemWidth * (totalOriginalItems + 2); // Allow dragging past the reset point
+
+            if (currentTranslate > maxTranslate) currentTranslate = maxTranslate;
+            if (currentTranslate < minTranslate) currentTranslate = minTranslate;
+
+            setTranslate(currentTranslate);
+        });
+
+        function setTranslate(xPos) {
+            currentTranslate = xPos;
+            track.style.transform = `translateX(${xPos}px)`;
+        }
+
+        // Touch events for mobile
+        carousel.addEventListener('touchstart', (e) => {
+            isDragging = true;
+            isPaused = true;
+            startPos = e.touches[0].pageX - carousel.offsetLeft;
+            scrollLeft = currentTranslate;
+        });
+
+        carousel.addEventListener('touchend', () => {
+            isDragging = false;
+            setTimeout(() => { isPaused = false; }, 500); // Resume after 0.5 second
+        });
+
+        carousel.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            const x = e.touches[0].pageX - carousel.offsetLeft;
+            const walk = (x - startPos) * 1.5; // More responsive touch dragging
+            currentTranslate = scrollLeft + walk;
+
+            // Allow reasonable drag bounds
+            const maxTranslate = itemWidth * 2; // Allow some forward dragging
+            const minTranslate = -itemWidth * (totalOriginalItems + 2); // Allow dragging past the reset point
+
+            if (currentTranslate > maxTranslate) currentTranslate = maxTranslate;
+            if (currentTranslate < minTranslate) currentTranslate = minTranslate;
+
+            setTranslate(currentTranslate);
+        });
+
+        // Scroll wheel event for mouse wheel scrolling
+        carousel.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            isPaused = true;
+
+            // Clear any existing timeout
+            clearTimeout(carousel.scrollTimeout);
+
+            const scrollAmount = e.deltaY > 0 ? -itemWidth * 0.3 : itemWidth * 0.3; // Smaller increments for smoother wheel scrolling
+            currentTranslate += scrollAmount;
+
+            // Allow reasonable scroll bounds
+            const maxTranslate = itemWidth * 2;
+            const minTranslate = -itemWidth * (totalOriginalItems + 2);
+
+            if (currentTranslate > maxTranslate) currentTranslate = maxTranslate;
+            if (currentTranslate < minTranslate) currentTranslate = minTranslate;
+
+            setTranslate(currentTranslate);
+
+            // Resume auto-scroll after 1 second of no wheel activity
+            carousel.scrollTimeout = setTimeout(() => {
+                isPaused = false;
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
